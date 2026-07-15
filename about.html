@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Mike Muller</title>
+  <meta name="description" content="About Mike Muller — a Shopify Developer focused on custom storefronts and theme work." />
+  <script>
+    (function() {
+      var prefersDark = false;
+      try { prefersDark = localStorage.getItem('theme') === 'dark'; } catch (e) {}
+      if (!prefersDark) document.documentElement.setAttribute('data-theme', 'light');
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <span class="eyebrow">About</span>
+        <h1>Welcome to my site</h1>
+        <p>Shopify Developer building storefronts that look sharp and convert well.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 40px;">
+      <div class="container about-grid">
+        <div class="about-portrait">
+          <div class="hero-portrait" style="aspect-ratio: 1/1;">
+            <div class="hero-portrait-initials">MM</div>
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <p><strong>Hi, I'm Mike.</strong> </p>
+          <p>I build custom Shopify storefronts — theme customization, Liquid sections, app integrations, and the small details that make a store feel finished instead of generic. Currently, I'm working on 2 new store builds that are scheduled to go live in August 2026.</p>
+          <p>Before Shopify, I worked in software development (C# and SQL) and spent time in accounting and client services. That background shapes how I operate: I think in systems, I pay attention to the details that affect how a business actually runs, and I communicate clearly — not in jargon.</p>
+          <p>I work with founders and small teams who care about how their brand looks and how their store performs. If that sounds like you, I'd love to chat.</p>
+            
+          <h3 style="margin-top: 32px; margin-bottom: 8px;">Tools I Work With</h3>
+          <div class="skills-grid">
+            <div class="skill-chip">Shopify Liquid</div>
+            <div class="skill-chip">HTML & CSS</div>
+            <div class="skill-chip">JavaScript</div>
+            <div class="skill-chip">Theme architecture</div>
+            <div class="skill-chip">Storefront API</div>
+            <div class="skill-chip">Performance tuning</div>
+            <div class="skill-chip">Responsive design</div>
+            <div class="skill-chip">Git & version control</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-cta">
+      <div class="container">
+        <h2>Let’s build something good.</h2>
+        <a href="contact.html" class="btn btn-primary">Get in touch →</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/includes.js"></script>
+</body>
+</html>

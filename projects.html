@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Mike Muller</title>
+  <meta name="description" content="Selected Shopify and frontend projects by Mike Muller." />
+  <script>
+    (function() {
+      var prefersDark = false;
+      try { prefersDark = localStorage.getItem('theme') === 'dark'; } catch (e) {}
+      if (!prefersDark) document.documentElement.setAttribute('data-theme', 'light');
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <span class="eyebrow">Projects</span>
+        <h1>Selected work</h1>
+        <p>Check out some of my featured projects.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 40px;">
+      <div class="container">
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <button type="button" class="project-thumb project-thumb-video" data-video="assets/squatch-golf-preview.mp4" aria-label="Play Squash Golf Apparel preview with sound">
+              <video class="project-preview" src="assets/squatch-golf-preview.mp4" muted playsinline preload="metadata"></video>
+              <span class="video-play-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+            </button>
+            <div class="project-body">
+              <span class="project-tag">Shopify Store Setup - In Progress</span>
+              <h3>Squash Golf Apparel</h3>
+              <p>Currently setting up online golf apparel store. Scheduled to launch in late August 2026. Once launched, will be providing ongoing support.</p>
+            </div>
+          </div>
+          <a href="https://thegameofwash.com" target="_blank" class="project-card reveal">
+            <div class="project-thumb project-thumb-2">02</div>
+            <div class="project-body">
+              <span class="project-tag">Shopify Customizations</span>
+              <h3>Game of Wash</h3>
+              <p>Added customized sections including upsell feature on product page, customer testimonial slider and custom Testimonial page.</p>
+            </div>
+          </a>
+          <a href="#" class="project-card reveal">
+            <div class="project-thumb project-thumb-3">03</div>
+            <div class="project-body">
+              <span class="project-tag">Product Customization</span>
+              <h3>Self Published Author Bookstore</h3>
+              <p>Currently creating online bookstore for self published author. Check back soon for updates.</p>
+            </div>
+          </a>
+          <a href="#" class="project-card reveal">
+            <div class="project-thumb project-thumb-4">04</div>
+            <div class="project-body">
+              <span class="project-tag">Performance</span>
+              <h3>Bike Shack</h3>
+              <p>Lighthouse-driven performance overhaul — cut JS payload, optimized image pipeline, and rebuilt critical path.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-cta">
+      <div class="container">
+        <h2>Have a project in mind?</h2>
+        <a href="contact.html" class="btn btn-primary">Tell me about it →</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="video-lightbox" id="videoLightbox" role="dialog" aria-modal="true" aria-label="Video preview" aria-hidden="true">
+    <button type="button" class="video-lightbox-close" aria-label="Close video">&times;</button>
+    <div class="video-lightbox-inner">
+      <video class="video-lightbox-player" controls playsinline></video>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="js/includes.js"></script>
+</body>
+</html>
