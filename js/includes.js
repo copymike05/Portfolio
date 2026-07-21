@@ -24,7 +24,6 @@ const HEADER_HTML = `
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="projects.html">Projects</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <button class="theme-toggle" aria-label="Toggle light/dark theme">
@@ -64,7 +63,6 @@ const FOOTER_HTML = `
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -76,7 +74,7 @@ const FOOTER_HTML = `
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year"></span> Mike Muller. All rights reserved.</span>
+      <span>© <span id="year"></span> Muller Web Development, LLC. All rights reserved.</span>
     </div>
   </div>
 </footer>
