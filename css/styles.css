@@ -202,9 +202,33 @@ p { color: var(--muted); }
   font-size: 1.25rem;
   margin-bottom: 36px;
   max-width: 520px;
-  color: #b8b8b8;
+  color: var(--muted);
 }
-.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+.hero-actions .btn { font-size: 1rem; }
+.hero-actions .btn-primary { border: 2px solid transparent; }
+
+/* Bullet points in hero section. All begin with checkmark.*/
+.hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  margin-top: 32px;
+  list-style: none;
+}
+.hero-trust li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+.hero-trust li::before {
+  content: '✓';
+  color: var(--accent);
+  font-weight: 700;
+}
 .hero-portrait {
   aspect-ratio: 4/5;
   background: linear-gradient(135deg, #1a1a1a, #0a0a0a);

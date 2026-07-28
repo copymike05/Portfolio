@@ -13,7 +13,7 @@
 const HEADER_HTML = `
 <header class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo">
+    <a href="/" class="logo">
       <svg class="logo-mark" viewBox="0 0 64 64" width="28" height="28" aria-hidden="true">
         <rect width="64" height="64" rx="14" fill="#0a0a0a"/>
         <path d="M16 46 V19 L32 37 L48 19 V46" fill="none" stroke="#c7ff3a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
@@ -21,7 +21,7 @@ const HEADER_HTML = `
       <span class="logo-text">Mike Muller</span>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="/">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -51,16 +51,13 @@ const FOOTER_HTML = `
           </a>
           <a href="https://www.upwork.com/freelancers/~0171d1ec43dab3a179" target="_blank" aria-label="Upwork">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6c-2.31 0-4.2 1.55-4.96 3.74-1.18-1.84-1.84-3.62-2.3-5.74H7.3v6.5c0 2-1.18 2-1.66 2-.46 0-1.65 0-1.65-2v-6.5H1.4v6.5c0 2.27 1.85 4.13 4.27 4.13 2.4 0 4.24-1.86 4.24-4.13.94 2 2.04 4.14 2.04 4.14L10.6 20H13l1.21-5.55c.94.6 2.02.95 3.18.95 2.55 0 4.62-2.07 4.62-4.62S20.15 6 17.6 6zm0 6.85c-1.24 0-2.24-1-2.24-2.23s1-2.23 2.24-2.23 2.23 1 2.23 2.23-1 2.23-2.23 2.23z"/></svg>
-          </a>
-          <a href="#" aria-label="Email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </a>
+          </a>        
         </div>
       </div>
       <div class="footer-col">
         <h4>Pages</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -69,7 +66,7 @@ const FOOTER_HTML = `
       <div class="footer-col">
         <h4>Let's Get in Touch</h4>
         <ul>
-          <li><a href="mailto:hello@mikemuller.dev">hello@mikemuller.dev</a></li>
+          <li><a href="mailto:mike@mike-muller.dev">mike@mike-muller.dev</a></li>
         </ul>
       </div>
     </div>
@@ -79,6 +76,10 @@ const FOOTER_HTML = `
   </div>
 </footer>
 `;
+
+ const toBeRestored = `<a href="#" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a> `;
 
 // ============================================================
 //  Loader — inserts the markup into the placeholder divs.
@@ -97,7 +98,9 @@ inject('header', HEADER_HTML);
 inject('footer', FOOTER_HTML);
 
 // Highlight the current page's nav link
-const path = location.pathname.split('/').pop() || 'index.html';
+// Treat "/", "" and "/index.html" as the same page so Home stays highlighted.
+const file = location.pathname.split('/').pop();
+const path = (!file || file === 'index.html') ? '/' : file;
 const activeLink = document.querySelector(`.nav-links a[href="${path}"]`);
 if (activeLink) activeLink.classList.add('active');
 
