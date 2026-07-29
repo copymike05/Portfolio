@@ -26,6 +26,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   --portrait-text: rgba(255, 255, 255, 0.06);
   --accent: #c7ff3a;
   --accent-hover: #b8f028;
+  --error: #ff6b6b;
   --max-width: 1200px;
   --radius: 16px;
 }
@@ -42,6 +43,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   --portrait-text: rgba(0, 0, 0, 0.06);
   --accent: #5d8a00;
   --accent-hover: #4a6f00;
+  --error: #c92a2a;
 }
 
 .container {
@@ -695,6 +697,34 @@ p { color: var(--muted); }
   border-color: var(--accent);
 }
 .form-row textarea { resize: vertical; min-height: 140px; }
+
+/* Form validation */
+.form-row.invalid input,
+.form-row.invalid textarea,
+.form-row.invalid select { border-color: var(--error); }
+.form-error {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: var(--error);
+}
+.form-alert {
+  display: none;
+  margin-bottom: 22px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--error);
+  background: color-mix(in srgb, var(--error) 10%, transparent);
+  color: var(--error);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+.form-alert.show { display: block; }
+.form-alert.success {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--heading);
+}
 
 /* ===== Page header (sub-pages) ===== */
 .page-header {
