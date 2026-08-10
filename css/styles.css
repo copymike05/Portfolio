@@ -726,6 +726,78 @@ p { color: var(--muted); }
   color: var(--heading);
 }
 
+/* ===== Case study (individual project pages) =====
+   squashgolf.html, thegameofwash.html, josephmuller.html, bikeshack.html
+   all share this layout: centered title block up top, the video front
+   and center, then the write-up. */
+.case-header { padding: 64px 0 32px; }
+.case-back {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 28px;
+  transition: color 0.2s;
+}
+.case-back:hover { color: var(--accent); }
+/* One centered column, capped to the video's width so the title
+   sits squarely over the frame below it. */
+.case-header-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.case-header h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+.case-meta { display: grid; gap: 24px; padding-top: 10px; }
+.case-meta-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--heading);
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+.case-meta-value { color: var(--muted); font-size: 0.98rem; }
+
+.case-video { padding: 16px 0 0; }
+.case-video-frame {
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #000;
+}
+.case-video-frame video { width: 100%; display: block; }
+/* Stand-in for a project that doesn't have a walkthrough clip yet */
+.case-video-placeholder {
+  aspect-ratio: 16/9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px;
+  text-align: center;
+  background: linear-gradient(135deg, #1d8c5b, #0c3322);
+  color: rgba(255, 255, 255, 0.85);
+}
+.case-video-placeholder strong { font-size: 1.1rem; font-weight: 600; }
+.case-video-placeholder span { font-size: 0.9rem; color: rgba(255, 255, 255, 0.6); }
+
+.case-body { max-width: 760px; margin: 0 auto; }
+.case-body p { margin-bottom: 20px; font-size: 1.05rem; line-height: 1.75; }
+.case-body p:last-child { margin-bottom: 0; }
+.case-body h2 { font-size: 1.6rem; margin: 40px 0 14px; }
+.case-body ul { list-style: none; display: grid; gap: 10px; margin-bottom: 20px; padding-left: 24px; }
+.case-body ul li {
+  display: flex;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+.case-body ul li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+.case-body a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
 /* ===== Page header (sub-pages) ===== */
 .page-header {
   padding: 80px 0 40px;
@@ -751,6 +823,7 @@ p { color: var(--muted); }
   .hero-portrait { max-width: 360px; }
   .services-grid, .projects-grid, .pricing-grid { grid-template-columns: 1fr; }
   .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .case-meta { padding-top: 0; }
   .footer-inner { grid-template-columns: 1fr; gap: 32px; }
   .section { padding: 70px 0; }
   .hero { padding: 60px 0; }

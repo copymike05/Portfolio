@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Game of Wash — Mike Muller</title>
+  <meta name="description" content="Shopify customizations for The Game of Wash — cart upsell feature, testimonial slider, and a custom testimonials page." />
+  <script>
+    (function() {
+      var prefersDark = false;
+      try { prefersDark = localStorage.getItem('theme') === 'dark'; } catch (e) {}
+      if (!prefersDark) document.documentElement.setAttribute('data-theme', 'light');
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <section class="case-header">
+      <div class="container">
+        <a href="projects.html" class="case-back">← Back to projects</a>
+        <div class="case-header-grid">
+          <div>
+            <span class="eyebrow">Shopify Customizations</span>
+            <h2>The Game of Wash</h2><br>
+              <div class="case-meta-value"><b class="case-meta-label">Status:</b> Customizations complete, including upsell feature and custom built testimonial section.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-video">
+      <div class="container">
+        <div class="case-video-frame">
+          <video src="assets/game-of-wash.mp4" controls playsinline preload="metadata"></video>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 56px;">
+      <div class="container">
+        <div class="case-body reveal">
+          <p>The above video shows an upsell feature I built for <a href="https://www.thegameofwash.com" target="_blank">The Game of Wash</a>, which sells a hand crafted yard game called Wash.</p>
+          <p>This upsell feature lets customers add extra dice to their order on the fly. This greatly simplified the process for the client as, previously, off platform arrangements had to be made when selling these dice. 
+            This feature was also designed to only be included with certain collections.
+          </p>
+          <p>Other customizations included...</p>
+          <ul>  
+            <li>Adding a new collection with new products</li>
+            <li>Edited social media icons to have external hyperlinks</li>
+            <li>A testimonial slider for the homepage</li>
+            <li>A dedicated testimonials page</li>
+          </ul>
+          <p>Testimonials were setup as a metobject so store owner can edit within his dashboard without touching any code.</p>
+          <p>In addition, a recent audit was performed on this store. Changes to be initiated will be detailed here soon.</p>
+        </div>
+      </div>
+       <div class="projects-cta reveal">
+          <a href="projects.html" class="btn btn-ghost">View all projects →</a>
+        </div>
+    </section>
+
+    <section class="footer-cta">
+      <div class="container">
+        <h2>Want a custom feature built into your theme?</h2>
+        <a href="contact.html" class="btn btn-primary">Tell me about it →</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/includes.js"></script>
+</body>
+</html>

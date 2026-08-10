@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bike Shack — Mike Muller</title>
+  <meta name="description" content="Performance work on the Bike Shack storefront — lighter JS payload, optimized images, and a rebuilt critical path." />
+  <script>
+    (function() {
+      var prefersDark = false;
+      try { prefersDark = localStorage.getItem('theme') === 'dark'; } catch (e) {}
+      if (!prefersDark) document.documentElement.setAttribute('data-theme', 'light');
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <section class="case-header">
+      <div class="container">
+        <a href="projects.html" class="case-back">← Back to projects</a>
+        <div class="case-header-grid">
+          <div>
+            <span class="eyebrow">Performance</span>
+            <h2>Bike Shack</h2><br>
+              <div class="case-meta-value"><b class="case-meta-label">Status:</b> Completed — speed and Core Web Vitals overhaul</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-video">
+      <div class="container">
+        <div class="case-video-frame">
+          <!-- Swap this block for a <video> tag once the walkthrough clip is ready:
+               <video src="assets/bike-shack.mp4" controls playsinline preload="metadata"></video> -->
+          <div class="case-video-placeholder">
+            <strong>Walkthrough video coming soon</strong>
+            <span>Check back shortly for a video tour of this project.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 56px;">
+      <div class="container">
+        <div class="case-body reveal">
+          <p>This project was a performance overhaul of the Bike Shack storefront, driven by Lighthouse scores and real-world load times rather than guesswork.</p>
+          <p>Store speed isn't a vanity metric. Every extra second before a page becomes usable costs conversions, and slow pages get pushed down in search results. The problem is that most stores get slow gradually — an app here, a tracking script there, a few oversized hero images — so there's rarely one thing to fix.</p>
+          <p>The work broke down into three areas: cutting the JavaScript payload by removing scripts the store no longer used and deferring the ones that didn't need to run immediately, optimizing the image pipeline so the browser downloads correctly sized and modern-format images instead of full-resolution originals, and rebuilding the critical path so the content a visitor sees first loads before anything below the fold competes for bandwidth.</p>
+          <p>The result is a storefront that feels immediate on mobile, where most of the traffic comes from, and a set of habits the store can keep following as new content gets added.</p>
+        </div>
+      </div>
+       <div class="projects-cta reveal">
+          <a href="projects.html" class="btn btn-ghost">View all projects →</a>
+        </div>
+    </section>
+
+    <section class="footer-cta">
+      <div class="container">
+        <h2>Is your store loading slowly?</h2>
+        <a href="contact.html" class="btn btn-primary">Tell me about it →</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/includes.js"></script>
+</body>
+</html>
