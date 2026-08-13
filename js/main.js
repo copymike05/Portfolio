@@ -94,7 +94,65 @@ if (videoLightbox) {
   });
 }
 
-// Contact form → validates, then submits to Netlify 
+// Testimonials carousel — arrows only, never auto-advances.
+// Slides one card per click and stops at both ends. How many cards are
+// visible comes from the --per-view CSS variable, so the layout stays in
+// charge of that and this just follows along on resize.
+const testimonialCarousel = document.querySelector('.testimonial-carousel');
+if (testimonialCarousel) {
+  const track = testimonialCarousel.querySelector('.testimonial-track');
+  const cards = track.querySelectorAll('.testimonial-card');
+  const controls = testimonialCarousel.querySelector('.testimonial-controls');
+  const prevBtn = testimonialCarousel.querySelector('[data-testimonial-prev]');
+  const nextBtn = testimonialCarousel.querySelector('[data-testimonial-next]');
+  let index = 0;
+
+  const perView = () => {
+    const value = parseInt(getComputedStyle(testimonialCarousel).getPropertyValue('--per-view'), 10);
+    return value > 0 ? value : 1;
+  };
+
+  // Last position where the track still fills the viewport
+  const maxIndex = () => Math.max(0, cards.length - perView());
+
+  const render = () => {
+    index = Math.min(index, maxIndex());
+    const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+    const step = cards.length ? cards[0].getBoundingClientRect().width + gap : 0;
+    track.style.transform = `translateX(-${index * step}px)`;
+
+    // With one or two testimonials there is nowhere to go — hide the arrows
+    const scrollable = maxIndex() > 0;
+    controls.hidden = !scrollable;
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index >= maxIndex();
+
+    cards.forEach((card, i) => {
+      const visible = i >= index && i < index + perView();
+      card.setAttribute('aria-hidden', visible ? 'false' : 'true');
+      // Keep off-screen cards out of the tab order
+      card.querySelectorAll('a, button').forEach((el) => {
+        if (visible) el.removeAttribute('tabindex');
+        else el.setAttribute('tabindex', '-1');
+      });
+    });
+  };
+
+  prevBtn.addEventListener('click', () => {
+    if (index > 0) index -= 1;
+    render();
+  });
+  nextBtn.addEventListener('click', () => {
+    if (index < maxIndex()) index += 1;
+    render();
+  });
+
+  // Card widths change with the breakpoint, so recompute the offset
+  window.addEventListener('resize', render);
+  render();
+}
+
+// Contact form → validates, then submits to Netlify
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
   const alertBox = contactForm.querySelector('.form-alert');
@@ -211,7 +269,7 @@ if (contactForm) {
       });
       if (!res.ok) throw new Error(res.status);
       contactForm.reset();
-      setAlert('Thanks — your message is on its way. I’ll reply within 2 business days.', true);
+      setAlert('Thanks — your message is on its way. I’ll reply within 1 business day.', true);
     } catch (err) {
       setAlert('Something went wrong sending that. Please email mike@mike-muller.dev directly.');
     }

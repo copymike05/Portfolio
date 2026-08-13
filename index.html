@@ -34,7 +34,7 @@
           </div>
           <ul class="hero-trust">
             <li>Shopify Specialist & Advocate</li>
-            <li>Replies within 2 business days</li>
+            <li>Replies within 1 business day</li>
             <li>Ongoing support</li>
           </ul>
         </div>
@@ -44,8 +44,26 @@
       </div>
     </section>
 
+    <!-- Intro video -->
+    <section class="section" id="intro">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Meet Mike</span>
+          <h2>A quick hello before we talk shop</h2>
+          <p>A minute on who I am, how I work, and what it's like having me on your project.</p>
+        </div>
+        <button type="button" class="intro-video project-thumb-video reveal" data-video="assets/intro-home-page.mp4" aria-label="Play Mike Muller's introduction video">
+          <video class="project-preview" src="assets/intro-home-page.mp4" poster="assets/home-intro-poster.jpg" muted playsinline preload="none"></video>
+          <span class="video-play-badge" aria-hidden="true">
+          <!-- Show play arrow within video. Without it, play icon displays as a green circle-->
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> 
+          </span>
+        </button>
+      </div>
+    </section>
+
     <!-- Services -->
-    <section class="section" id="services">
+    <section class="section" id="services" style="padding-top: 0;">
       <div class="container">
         <div class="section-header reveal">          
           <h2>How Can I Help You?</h2>
@@ -77,7 +95,84 @@
       </div>
     </section>    
 
-    <!-- Timeline -->
+    <!-- Projects preview -->
+    <section class="section" id="projects" style="padding-top: 0;">
+      <div class="container">
+        <div class="section-header reveal">          
+          <h2>Recent projects</h2>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <button type="button" class="project-thumb project-thumb-video" data-video="assets/squatch-golf-preview.mp4" aria-label="Play Squatch_Golf Apparel preview with sound">
+              <video class="project-preview" src="assets/squatch-golf-preview.mp4" muted playsinline preload="metadata"></video>
+              <span class="video-play-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+            </button>
+            <div class="project-body">
+              <span class="project-tag">Shopify Store Setup - In Progress</span>
+              <h3>Squatch_Golf Apparel</h3>
+              <p>Currently setting up online golf apparel store. Click Play button for a live preview of work in progress.</p>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <button type="button" class="project-thumb project-thumb-video" data-video="assets/game-of-wash.mp4" aria-label="Play Game of Wash preview with sound">
+              <video class="project-preview" src="assets/game-of-wash.mp4" muted playsinline preload="metadata"></video>
+              <span class="video-play-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+            </button>
+            <div class="project-body">
+              <span class="project-tag">Shopify Customizations - Upsell feature</span>
+              <h3>The Game of Wash</h3>
+              <p>Created upsell feature extra dice could be purchased on the fly. Also built customer testimonial slider and custom Testimonial page.</p>
+            </div>
+          </div>
+        </div>
+        <div class="projects-cta reveal">
+          <a href="projects.html" class="btn btn-ghost">View all projects →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials carousel -->
+    <section class="section" id="testimonials" style="padding-top: 0;">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Testimonials</span>
+          <h2>What my clients are saying</h2>
+        </div>
+
+        <div class="testimonial-carousel reveal" role="region" aria-roledescription="carousel" aria-label="Client testimonials">
+          <div class="testimonial-viewport">
+            <div class="testimonial-track">
+              <!-- Real testimonial -->
+              <figure class="testimonial-card">
+                <blockquote>I am an independent author, and Mike has been helping me set up my website to sell books and advertise all my projects. He has been incredibly easy to work with, very attentive to detail and, most importantly, full of great ideas.  I would recommend him to anybody who wants to get an online presence but doesn’t know where to start</blockquote>
+                <figcaption class="testimonial-author">
+                  <span class="testimonial-avatar" aria-hidden="true">JM</span>
+                  <span>
+                    <strong>Joseph Muller</strong>
+                    <span class="testimonial-role">Self Published Author</span>
+                  </span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="testimonial-controls">
+            <button type="button" class="testimonial-arrow" data-testimonial-prev aria-label="Previous testimonial">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button type="button" class="testimonial-arrow" data-testimonial-next aria-label="Next testimonial">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!-- Timeline -->
     <section class="section" style="background: linear-gradient(180deg, transparent, rgba(199,255,58,0.03), transparent);">
       <div class="container">
         <div class="section-header reveal">
@@ -104,46 +199,6 @@
       </div>
     </section>
 
-    <!-- Projects preview -->
-    <section class="section" id="projects" style="padding-top: 0;">
-      <div class="container">
-        <div class="section-header reveal">          
-          <h2>Recent projects</h2>
-        </div>
-        <div class="projects-grid">
-          <div class="project-card reveal">
-            <button type="button" class="project-thumb project-thumb-video" data-video="assets/squatch-golf-preview.mp4" aria-label="Play Squatch_Golf Apparel preview with sound">
-              <video class="project-preview" src="assets/squatch-golf-preview.mp4" muted playsinline preload="metadata"></video>
-              <span class="video-play-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </span>
-            </button>
-            <div class="project-body">
-              <span class="project-tag">Shopify Store Setup - In Progress</span>
-              <h3>Squatch_Golf Apparel</h3>
-              <p>Currently setting up online golf apparel store. Click Play button for a live preview of work in progress.</p>
-            </div>
-          </div>
-          <div class="project-card reveal">
-            <button type="button" class="project-thumb project-thumb-video" data-video="assets/squatch-golf-preview.mp4" aria-label="Play Squatch_Golf Apparel preview with sound">
-              <video class="project-preview" src="assets/game-of-wash.mp4" muted playsinline preload="metadata"></video>
-              <span class="video-play-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </span>
-            </button>
-            <div class="project-body">
-              <span class="project-tag">Shopify Customizations - Upsell feature</span>
-              <h3>The Game of Wash</h3>
-              <p>Created upsell feature extra dice could be purchased on the fly. Also built customer testimonial slider and custom Testimonial page.</p>
-            </div>
-          </div>
-        </div>
-        <div class="projects-cta reveal">
-          <a href="projects.html" class="btn btn-ghost">View all projects →</a>
-        </div>
-      </div>
-    </section>       
-
     <!-- FAQ -->
     <section class="section">
       <div class="container">
@@ -154,11 +209,11 @@
         <div class="faq-list">
           <div class="faq-item reveal">
             <button class="faq-question">How do I get started working with you?<span class="faq-toggle">+</span></button>
-            <div class="faq-answer"><p>Fill out the contact form and tell me about your project. I'll get back to you within 2 business days to schedule a free discovery call. From there, I'll send a proposal with scope, timeline, and pricing.</p></div>
+            <div class="faq-answer"><p>Fill out the contact form and tell me about your project. I'll get back to you within 1 business day to schedule a free discovery call. From there, I'll send a proposal with scope, timeline, and pricing.</p></div>
           </div>
           <div class="faq-item reveal">
             <button class="faq-question">What kinds of Shopify projects do you work on?<span class="faq-toggle">+</span></button>
-            <div class="faq-answer"><p>I specialize in Shopify store builds, theme customizations, ongoing support and landing page design. Currently, I don't work on custom Shopify apps or speed optimization.</p></div>
+            <div class="faq-answer"><p>I specialize in Shopify store builds, theme customizations, ongoing support and landing page design. Currently, I don't work on custom Shopify apps.</p></div>
           </div>
           <div class="faq-item reveal">
             <button class="faq-question">Do you take on non-Shopify projects?<span class="faq-toggle">+</span></button>
@@ -166,7 +221,7 @@
           </div>
           <div class="faq-item reveal">
             <button class="faq-question">Do you offer ongoing support after a project is complete?<span class="faq-toggle">+</span></button>
-            <div class="faq-answer"><p>Yes. Every project includes a 30-day post-launch period for bug fixes at no charge. After that, ongoing support and updates are available as a paid service. I'll always give you clear documentation so your team can handle day-to-day tasks independently if you prefer.'</p></div>
+            <div class="faq-answer"><p>Yes. Every project includes a 30-day post-launch period for bug fixes at no charge. After that, ongoing support and updates are available as a paid service. I'll always give you clear documentation so your team can handle day-to-day tasks independently if you prefer.</p></div>
           </div>          
         </div>
       </div>

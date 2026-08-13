@@ -1,0 +1,20 @@
+# Netlify redirect rules — read at deploy time, ignored by Live Server.
+#
+# Every link in this site points at the real filename (contact.html) so that
+# VS Code Live Server, which cannot resolve extensionless URLs, keeps working
+# locally. These rules strip the .html once the site is on Netlify, so the
+# address bar shows /contact instead of /contact.html.
+#
+# The trailing "!" forces the redirect. Without it Netlify would notice that
+# contact.html actually exists, serve the file, and skip the rule entirely.
+#
+# Format: <from>  <to>  <status>
+
+/index.html          /                301!
+/about.html          /about           301!
+/projects.html       /projects        301!
+/contact.html        /contact         301!
+/bikeshack.html      /bikeshack       301!
+/squatchgolf.html    /squatchgolf     301!
+/thegameofwash.html  /thegameofwash   301!
+/josephmuller.html   /josephmuller    301!
