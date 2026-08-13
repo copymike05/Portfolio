@@ -41,32 +41,51 @@ const io = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 
-// Video lightbox — click a [data-video] thumbnail to play it with sound
+// Lightbox — [data-video] thumbnails play with sound, [data-image] open full size
 const videoLightbox = document.getElementById('videoLightbox');
 if (videoLightbox) {
   const player = videoLightbox.querySelector('.video-lightbox-player');
+  const image = videoLightbox.querySelector('.video-lightbox-image');
   const closeBtn = videoLightbox.querySelector('.video-lightbox-close');
   let activePreview = null; // the card's looping preview behind the popup
+  let lastFocused = null;   // so Escape returns the keyboard where it was
+
+  const showLightbox = (trigger) => {
+    lastFocused = trigger;
+    videoLightbox.classList.add('open');
+    videoLightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  };
 
   const openLightbox = (trigger) => {
     // Pause the small looping preview so it isn't running behind the popup
     activePreview = trigger.querySelector('.project-preview');
     if (activePreview) activePreview.pause();
 
+    image.hidden = true;
+    player.hidden = false;
     player.src = trigger.getAttribute('data-video');
     player.currentTime = 0;
     player.muted = false;
-    videoLightbox.classList.add('open');
-    videoLightbox.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
+    showLightbox(trigger);
     const playPromise = player.play();
     if (playPromise) playPromise.catch(() => {});
+  };
+
+  const openImageLightbox = (trigger) => {
+    player.hidden = true;
+    image.hidden = false;
+    image.src = trigger.getAttribute('data-image');
+    image.alt = trigger.getAttribute('data-image-alt') || '';
+    showLightbox(trigger);
   };
 
   const closeLightbox = () => {
     player.pause();
     player.removeAttribute('src');
     player.load();
+    image.removeAttribute('src');
     videoLightbox.classList.remove('open');
     videoLightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
@@ -76,12 +95,23 @@ if (videoLightbox) {
       activePreview.currentTime = 0;
       activePreview = null;
     }
+    if (lastFocused) {
+      lastFocused.focus();
+      lastFocused = null;
+    }
   };
 
   document.querySelectorAll('[data-video]').forEach((trigger) => {
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
       openLightbox(trigger);
+    });
+  });
+
+  document.querySelectorAll('[data-image]').forEach((trigger) => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      openImageLightbox(trigger);
     });
   });
 
