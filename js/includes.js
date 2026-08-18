@@ -43,15 +43,9 @@ const FOOTER_HTML = `
       <div class="footer-col">
         <span class="logo" style="font-size: 2rem; display: inline-block; margin-bottom: 16px;">Follow Me</span>
         <div class="footer-socials" style="margin-top: 0.5px;">
-          <a href="https://github.com/copymike05" target="_blank" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.07 1.83 2.81 1.3 3.5.99.1-.77.42-1.3.76-1.6-2.66-.3-5.46-1.34-5.46-5.94 0-1.32.47-2.39 1.23-3.23-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.23 0 4.61-2.8 5.63-5.47 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.58A12 12 0 0 0 12 .3"/></svg>
-          </a>
           <a href="https://www.linkedin.com/in/mike-muller-992ba511" target="_blank" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3v11zM6.5 6.7a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zM20 19h-3v-5.6c0-1.4-.5-2.3-1.7-2.3a1.85 1.85 0 0 0-1.7 1.2c-.1.2-.1.5-.1.8V19h-3V8h3v1.3A3 3 0 0 1 16 7.8c2 0 4 1.3 4 4.2V19z"/></svg>
-          </a>
-          <a href="https://www.upwork.com/freelancers/~0171d1ec43dab3a179" target="_blank" aria-label="Upwork">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6c-2.31 0-4.2 1.55-4.96 3.74-1.18-1.84-1.84-3.62-2.3-5.74H7.3v6.5c0 2-1.18 2-1.66 2-.46 0-1.65 0-1.65-2v-6.5H1.4v6.5c0 2.27 1.85 4.13 4.27 4.13 2.4 0 4.24-1.86 4.24-4.13.94 2 2.04 4.14 2.04 4.14L10.6 20H13l1.21-5.55c.94.6 2.02.95 3.18.95 2.55 0 4.62-2.07 4.62-4.62S20.15 6 17.6 6zm0 6.85c-1.24 0-2.24-1-2.24-2.23s1-2.23 2.24-2.23 2.23 1 2.23 2.23-1 2.23-2.23 2.23z"/></svg>
-          </a>        
+          </a>              
         </div>
       </div>
       <div class="footer-col">
