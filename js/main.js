@@ -299,7 +299,7 @@ if (contactForm) {
       });
       if (!res.ok) throw new Error(res.status);
       contactForm.reset();
-      setAlert('Thanks — your message is on its way. I’ll reply within 1 business day.', true);
+      setAlert("Thanks — your message is on its way. I'll reply within 1 business day.", true);
     } catch (err) {
       setAlert('Something went wrong sending that. Please email mike@mike-muller.dev directly.');
     }
