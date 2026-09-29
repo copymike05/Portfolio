@@ -604,6 +604,8 @@ p { color: var(--muted); }
   color: var(--muted);
   font-size: 0.9rem;
 }
+.testimonial-role a { text-decoration: underline; text-underline-offset: 3px; }
+.testimonial-role a:hover { color: var(--accent); }
 .testimonial-controls {
   display: flex;
   justify-content: flex-end;
