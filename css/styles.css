@@ -861,6 +861,22 @@ p { color: var(--muted); }
 }
 .case-meta-value { color: var(--muted); font-size: 0.98rem; }
 
+/* Pages with more than one project label each video with a pill + title. */
+.case-project-head { text-align: center; margin-bottom: 24px; }
+.case-project-num {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 5px 14px;
+  margin-bottom: 25px;
+}
+.case-project-head h3 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); }
+
 .case-video { padding: 16px 0 0; }
 .case-video-frame {
   max-width: 900px;
