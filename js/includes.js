@@ -61,6 +61,8 @@ const FOOTER_HTML = `
         <h4>Let's Get in Touch</h4>
         <ul>
           <li><a href="mailto:mike@mike-muller.dev">mike@mike-muller.dev</a></li>
+          <li class="footer-text">St. Louis, MO</li>
+          <li class="footer-text">Working remotely and worldwide</li>
         </ul>
       </div>
     </div>

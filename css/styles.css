@@ -707,6 +707,7 @@ p { color: var(--muted); }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
 .footer-col a { color: var(--muted); font-size: 0.95rem; transition: color 0.2s; }
 .footer-col a:hover { color: var(--accent); }
+.footer-col .footer-text { color: var(--muted); font-size: 0.95rem; }
 .footer-socials { display: flex; gap: 14px; }
 .footer-socials a {
   width: 40px;
@@ -852,6 +853,8 @@ p { color: var(--muted); }
   text-align: center;
 }
 .case-header h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+/* Project name is the page's <h1> for SEO, but keeps the h2 size it was designed at. */
+.case-header h1.case-title { font-size: clamp(2rem, 4vw, 3.25rem); }
 .case-meta-label {
   font-size: 1.2rem;
   font-weight: 700;
@@ -886,7 +889,8 @@ p { color: var(--muted); }
   overflow: hidden;
   background: #000;
 }
-.case-video-frame video { width: 100%; display: block; }
+.case-video-frame video,
+.case-video-frame img { width: 100%; height: auto; display: block; }
 /* Stand-in for a project that doesn't have a walkthrough clip yet */
 .case-video-placeholder {
   aspect-ratio: 16/9;
