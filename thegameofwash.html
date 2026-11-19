@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Game of Wash Shopify Customizations | Mike Muller</title>
-  <meta name="description" content="Case study: Shopify theme customizations for The Game of Wash, including a cart upsell feature, testimonial slider, and a custom testimonials page." />
+  <title>The Game of WASH Shopify Customizations | Mike Muller</title>
+  <meta name="description" content="Shopify theme customizations for The Game of WASH, including an extra-dice upsell with a color picker on the product page, a testimonial slider, and a custom testimonials page." />
   <link rel="canonical" href="https://mike-muller.dev/thegameofwash" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Mike Muller, Shopify Developer" />
-  <meta property="og:title" content="The Game of Wash Shopify Customizations | Mike Muller" />
-  <meta property="og:description" content="Case study: Shopify theme customizations for The Game of Wash, including a cart upsell feature, testimonial slider, and a custom testimonials page." />
+  <meta property="og:title" content="The Game of WASH Shopify Customizations | Mike Muller" />
+  <meta property="og:description" content="Shopify theme customizations for The Game of WASH, including an extra-dice upsell with a color picker on the product page, a testimonial slider, and a custom testimonials page." />
   <meta property="og:url" content="https://mike-muller.dev/thegameofwash" />
-  <meta property="og:image" content="https://mike-muller.dev/assets/profile-hero-enhanced.png" />
+  <meta property="og:image" content="https://mike-muller.dev/assets/profile-hero-enhanced.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <script>
     (function() {
-      var prefersDark = false;
-      try { prefersDark = localStorage.getItem('theme') === 'dark'; } catch (e) {}
-      if (!prefersDark) document.documentElement.setAttribute('data-theme', 'light');
+      var prefersLight = false;
+      try { prefersLight = localStorage.getItem('theme') === 'light'; } catch (e) {}
+      if (prefersLight) document.documentElement.setAttribute('data-theme', 'light');
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
@@ -38,8 +39,8 @@
         <div class="case-header-grid">
           <div>
             <span class="eyebrow">Shopify Customizations</span>
-            <h1 class="case-title">The Game of Wash</h1><br>
-              <div class="case-meta-value"><b class="case-meta-label">Status:</b>Customizations complete</div>
+            <h1 class="case-title">The Game of WASH</h1><br>
+              <div class="case-meta-value"><b class="case-meta-label">Status: </b>Customizations complete</div>
           </div>
         </div>
       </div>
@@ -53,10 +54,50 @@
       </div>
     </section>
 
+    <!-- Working copy of the extra-dice upsell (logic in js/main.js) -->
+    <section class="section" id="try-it" style="padding-top: 56px; padding-bottom: 0;">
+      <div class="container">
+        <div class="case-demo reveal">
+          <div>
+            <span class="eyebrow">Try it yourself</span>
+            <h2>The extra dice upsell, working.</h2>
+            <p>Flip the switch, pick a color and choose how many sets to buy. The total updates the same way it does on the live product page.</p>
+          </div>
+          <form class="store-demo" id="upsellDemo" autocomplete="off" aria-label="Interactive demo of the extra dice upsell">
+            <div class="demo-row"><span class="eyebrow">Live demo</span><span class="chip chip-lime">Try it</span></div>
+            <div class="demo-row"><span class="demo-name">Game of WASH board</span><span class="demo-price">$160.00</span></div>
+            <div class="upsell-box" id="upsellBox">
+              <label class="upsell-toggle" for="extraDice">
+                <span class="switch"><input type="checkbox" id="extraDice"><span></span></span>
+                Need extra dice? $5 per set
+              </label>
+              <p class="demo-small">Each set includes 4 dice and 1 scoring peg in your chosen color.</p>
+              <div class="upsell-opts">
+                <div class="swatches" id="diceSwatches" role="group" aria-label="Dice color"></div>
+                <div class="demo-row">
+                  <span class="demo-small" id="diceColorName">Color: Blue</span>
+                  <div class="stepper" aria-label="Number of extra sets">
+                    <button type="button" id="setsMinus" aria-label="Fewer sets">−</button>
+                    <output id="setsCount">1</output>
+                    <button type="button" id="setsPlus" aria-label="More sets">+</button>
+                  </div>
+                </div>
+                <p class="upsell-summary" id="setsSummary" aria-live="polite"></p>
+              </div>
+            </div>
+            <div class="demo-row demo-total"><span>Total</span><span class="demo-price" id="demoTotal">$160.00</span></div>
+            <button class="btn btn-primary" type="submit">Add to cart</button>
+            <p class="demo-note" id="demoNote" aria-live="polite"></p>
+            <button type="button" class="demo-reset" id="demoReset">↺ Reset demo</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <section class="section" style="padding-top: 56px;">
       <div class="container">
         <div class="case-body reveal">
-          <p>The above video shows an upsell feature I built for <a href="https://www.thegameofwash.com" target="_blank">The Game of Wash</a>, which sells a handcrafted yard game called Wash.</p>
+          <p>The above video shows an upsell feature I built for <a href="https://www.thegameofwash.com" target="_blank">The Game of WASH</a>, which sells a handcrafted yard game called WASH.</p>
           <p>This upsell feature lets customers add extra dice to their order on the fly. This greatly simplified the process for the client as, previously, off platform arrangements had to be made when selling these dice. 
             This feature was also designed to only be included with certain collections.
           </p>
@@ -67,9 +108,8 @@
             <li>A testimonial slider for the homepage</li>
             <li>A dedicated testimonials page</li>
           </ul>
-          <p>Testimonials were set up as a metaobject so the store owner can edit within his dashboard without touching any code.</p>
-          <p>In addition, a recent audit was performed to further enhance the site and streamline user experience. Changes to be initiated will be detailed here soon.</p>
-        </div>
+          <p>Testimonials were set up as a metaobject so the store owner can edit within his dashboard without touching code.</p>
+          </div>
       </div>
        <div class="projects-cta reveal">
           <a href="projects.html" class="btn btn-ghost">View all projects →</a>
@@ -79,7 +119,7 @@
     <section class="footer-cta">
       <div class="container">
         <h2>Want custom features built into your theme?</h2>
-        <a href="contact.html" class="btn btn-primary">Tell me about it →</a>
+        <a href="contact.html" class="btn btn-primary" data-text="ctaButton"></a>
       </div>
     </section>
   </main>

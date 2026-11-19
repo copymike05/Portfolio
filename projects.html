@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shopify Projects &amp; Case Studies | Mike Muller</title>
-  <meta name="description" content="Shopify store builds and theme customizations by freelance Shopify developer Mike Muller, including Wicking Vicar, The Game of Wash, and more." />
+  <title>Shopify Developer Portfolio | Mike Muller, St. Louis</title>
+  <meta name="description" content="Shopify store builds and theme customizations by freelance Shopify developer Mike Muller, including Wicking Vicar, The Game of WASH, and more." />
   <link rel="canonical" href="https://mike-muller.dev/projects" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Mike Muller, Shopify Developer" />
-  <meta property="og:title" content="Shopify Projects &amp; Case Studies | Mike Muller" />
-  <meta property="og:description" content="Shopify store builds and theme customizations by freelance Shopify developer Mike Muller, including Wicking Vicar, The Game of Wash, and more." />
+  <meta property="og:title" content="Shopify Developer Portfolio | Mike Muller, St. Louis" />
+  <meta property="og:description" content="Shopify store builds and theme customizations by freelance Shopify developer Mike Muller, including Wicking Vicar, The Game of WASH, and more." />
   <meta property="og:url" content="https://mike-muller.dev/projects" />
-  <meta property="og:image" content="https://mike-muller.dev/assets/profile-hero-enhanced.png" />
+  <meta property="og:image" content="https://mike-muller.dev/assets/profile-hero-enhanced.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <script>
     (function() {
-      var prefersDark = false;
-      try { prefersDark = localStorage.getItem('theme') === 'dark'; } catch (e) {}
-      if (!prefersDark) document.documentElement.setAttribute('data-theme', 'light');
+      var prefersLight = false;
+      try { prefersLight = localStorage.getItem('theme') === 'light'; } catch (e) {}
+      if (prefersLight) document.documentElement.setAttribute('data-theme', 'light');
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
@@ -32,74 +33,144 @@
   <div id="header"></div>
 
   <main>
-    <section class="page-header">
+    <section class="page-intro">
       <div class="container">
         <span class="eyebrow">Projects</span>
-        <h1>Selected work</h1>
-        <p>Check out some of my featured projects.</p>
-      </div>
-    </section>
-
-    <section class="section" style="padding-top: 40px;">
-      <div class="container">
-        <div class="projects-grid">
-          <a href="wickingvicar.html" class="project-card reveal">
-            <div class="project-thumb project-thumb-video">
-              <video class="project-preview" src="assets/wicking-vickar-video.mp4" poster="assets/wicking-vickar-card-poster.jpg" muted playsinline preload="metadata"></video>
-            </div>
-            <div class="project-body">
-              <span class="project-tag">Shopify Customizations -  Ongoing client, 2 projects</span>
-              <h3>Wicking Vicar</h3>
-              <p>Rebuilt the site's video section with a custom YouTube-powered section, added Coming Soon badges and product-specific email signups, and provided admin training on partial fulfillments.</p>
-            </div>
-          </a>
-          <a href="thegameofwash.html" class="project-card reveal">
-            <div class="project-thumb project-thumb-video">
-              <video class="project-preview" src="assets/game-of-wash.mp4" poster="assets/game-of-wash-poster.jpg" muted playsinline preload="metadata"></video>
-            </div>
-            <div class="project-body">
-              <span class="project-tag">Shopify Customizations - Upsell feature</span>
-              <h3>The Game of Wash</h3>
-              <p>Created upsell feature so extra dice could be purchased on product page. Also built customized testimonial slider and custom Testimonial page.</p>
-            </div>  
-          </a>
-          <a href="squatchgolf.html" class="project-card reveal">
-            <div class="project-thumb project-thumb-video">
-              <video class="project-preview" src="assets/squatch-golf-latest.mp4" poster="assets/squatch-golf-latest-poster.jpg" muted playsinline preload="metadata"></video>
-            </div>
-            <div class="project-body">
-              <span class="project-tag">Golf Apparel Store Setup - In Progress</span>
-              <h3>Squatch_Golf Apparel</h3>
-              <p>Currently setting up online golf apparel store. Will provide ongoing support as store grows and evolves. Scheduled to deploy in spring 2027.</p>
-            </div>
-          </a>
-          <a href="josephmuller.html" class="project-card reveal">
-            <div class="project-thumb project-thumb-video">
-              <img class="project-preview" src="assets/joseph-muller-site.jpg" alt="Homepage of the author website for Joseph Muller" loading="lazy" width="1887" height="896">
-            </div>
-            <div class="project-body">
-              <span class="project-tag">Custom Author Website - In Progress</span>
-              <h3>Joseph Muller - Self-Published Author</h3>
-              <p>Currently building an author website that connects readers directly to his books on Amazon.</p>
-            </div>
-          </a>
-          <a href="bikeshack.html" class="project-card reveal">
-            <div class="project-thumb project-thumb-video">
-              <video class="project-preview" src="assets/bike-shack-final.mp4" poster="assets/bike-shack-final-poster.jpg" muted playsinline preload="metadata"></video>
-            </div>
-            <div class="project-body">
-              <span class="project-tag">Full Store Build</span>
-              <h3>Bike Shack</h3>
-              <p>Online Bike Store featuring custom designed Collection and interesting video imaging.</p>
-            </div>
-          </a>
+        <h1>Stores I've worked on</h1>
+        <p class="lede">Check out some of my featured projects.</p>
+        <div class="proj-filters" role="group" aria-label="Filter projects">
+          <button type="button" class="proj-filter" data-filter="all" aria-pressed="true">All<span class="n">5</span></button>
+          <button type="button" class="proj-filter" data-filter="build" aria-pressed="false">Store builds<span class="n">2</span></button>
+          <button type="button" class="proj-filter" data-filter="custom" aria-pressed="false">Customizations<span class="n">2</span></button>
+          <button type="button" class="proj-filter" data-filter="site" aria-pressed="false">Custom websites<span class="n">1</span></button>
         </div>
       </div>
     </section>
 
+    <div class="container">
+      <div class="proj-list">
+        <article class="proj-row" data-category="custom">
+          <div class="proj-media">
+            <div class="browser-frame">
+              <div class="browser-bar"><b>Wicking Vicar</b></div>
+              <video data-autoplay src="assets/wicking-vickar-video.mp4" poster="assets/wicking-vickar-video-poster.jpg" muted loop playsinline preload="none"></video>
+            </div>
+          </div>
+          <div class="proj-info">
+            <div class="chip-row"><span class="chip chip-status is-live">Ongoing client</span><span class="chip">Customizations · 2 projects</span></div>
+            <h2><a href="wickingvicar.html">Wicking Vicar</a></h2>
+            <p>A clerical apparel brand that needed a rebuilt video section, rebranded products and a cost saving solution for manually entered orders.</p>
+            <ul class="proj-built">
+              <li>Rebuilt the video section as a custom YouTube-powered section</li>
+              <li>Coming Soon badges for new products with product-specific email signups</li>
+              <li>Admin training on partial fulfillments</li>
+            </ul>
+            <div class="proj-links"><a href="wickingvicar.html" class="link-underline">See what I built →</a></div>
+          </div>
+        </article>
+
+        <article class="proj-row" data-category="custom">
+          <div class="proj-media">
+            <div class="browser-frame">
+              <div class="browser-bar"><b>The Game of WASH</b></div>
+              <video data-autoplay src="assets/game-of-wash.mp4" poster="assets/game-of-wash-poster.jpg" muted loop playsinline preload="none"></video>
+            </div>
+          </div>
+          <div class="proj-info">
+            <div class="chip-row"><span class="chip chip-status is-live">Live</span><span class="chip">Upsell feature</span></div>
+            <h2><a href="thegameofwash.html">The Game of WASH</a></h2>
+            <p>Customers wanted extra dice in specialized colors and selling them used to require special arrangements outside the store. Now shoppers can pick a color and add them right on the product page.</p>
+            <ul class="proj-built">
+              <li>Extra dice upsell with color picker on the product page</li>
+              <li>Custom testimonial slider</li>
+              <li>Dedicated testimonial page</li>
+            </ul>
+            <div class="proj-links">
+              <a href="thegameofwash.html" class="link-underline">See what I built →</a>
+              <a href="thegameofwash.html#try-it" class="link-underline">Try the upsell demo→</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-row" data-category="build">
+          <div class="proj-media">
+            <div class="browser-frame">
+              <div class="browser-bar"><b>squatch_golf</b></div>
+              <video data-autoplay src="assets/squatch-golf-latest.mp4" poster="assets/squatch-golf-latest-poster.jpg" muted loop playsinline preload="none"></video>
+            </div>
+          </div>
+          <div class="proj-info">
+            <div class="chip-row"><span class="chip chip-status is-wip">In progress · launching spring 2027</span><span class="chip">Full store setup</span></div>
+            <h2><a href="squatchgolf.html">squatch_golf</a></h2>
+            <p>A new golf apparel brand going online for the first time. I'm setting up the full store and will support it as the brand grows.</p>
+            <ul class="proj-built">
+              <li>Full store setup from theme to launch</li>
+              <li>Collections for polos, quarter-zips and accessories</li>
+              <li>Ongoing support after launch</li>
+            </ul>
+            <div class="proj-links"><a href="squatchgolf.html" class="link-underline">See what I built →</a></div>
+          </div>
+        </article>
+
+        <article class="proj-row" data-category="site">
+          <div class="proj-media">
+            <div class="browser-frame">
+              <div class="browser-bar"><b>Joseph Muller · Author</b></div>
+              <img src="assets/joseph-muller-site.jpg" class="img-full" alt="Homepage of Joseph Muller's author website" width="1777" height="847" loading="lazy">
+            </div>
+          </div>
+          <div class="proj-info">
+            <div class="chip-row"><span class="chip chip-status is-wip">In progress</span><span class="chip">Custom website</span></div>
+            <h2><a href="josephmuller.html">Joseph Muller<br>Self-Published Author</a></h2>
+            <p>An author website that connects readers directly to his books on Amazon, with room to promote new releases.</p>
+            <ul class="proj-built">
+              <li>Custom design built around the author's brand</li>
+              <li>Book pages linking straight to Amazon</li>
+              <li>New-release promotion for his fourth book</li>
+            </ul>
+            <div class="proj-links"><a href="josephmuller.html" class="link-underline">See what I built →</a></div>
+          </div>
+        </article>
+
+        <article class="proj-row" data-category="build">
+          <div class="proj-media">
+            <div class="browser-frame">
+              <div class="browser-bar"><b>Bike Shack</b></div>
+              <video data-autoplay src="assets/bike-shack-final.mp4" poster="assets/bike-shack-final-poster.jpg" muted loop playsinline preload="none"></video>
+            </div>
+          </div>
+          <div class="proj-info">
+            <div class="chip-row"><span class="chip chip-status">Complete</span><span class="chip">Full store build</span></div>
+            <h2><a href="bikeshack.html">Bike Shack</a></h2>
+            <p>A complete online bike store with a bold dark look, custom collection pages and video-driven product imagery.</p>
+            <ul class="proj-built">
+              <li>Full store build, start to finish</li>
+              <li>Custom-designed collection pages</li>
+              <li>Video imagery throughout the storefront</li>
+            </ul>
+            <div class="proj-links"><a href="bikeshack.html" class="link-underline">See what I built →</a></div>
+          </div>
+        </article>
+
+        <p class="proj-empty" id="projEmpty" hidden>No projects in this category yet.</p>
+      </div>
+
+      <div class="proj-yours">
+        <div>
+          <span class="eyebrow">Next up</span>
+          <h2>Your store could be here.</h2>
+          <p>Tell me what you're selling and what's not working. I'll reply within one business day.</p>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Start a project →</a>
+      </div>
+    </div>
+
     <section class="footer-cta">
       <div class="container">
-        <h2>Have a project in mind?</h2>
+        <div>
+          <h2>Have a project in mind?</h2>
+          <p>A new store, a custom feature or ongoing help. Let's talk about it.</p>
+        </div>
         <a href="contact.html" class="btn btn-primary">Tell me about it →</a>
       </div>
     </section>

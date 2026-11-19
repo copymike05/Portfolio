@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hire a Shopify Developer | Contact Mike Muller</title>
+  <title>Hire a St. Louis Shopify Developer | Mike Muller</title>
   <meta name="description" content="Hire a St. Louis based Shopify developer for store setup, theme customization, or ongoing support. Working remotely with clients anywhere. Replies within 1 business day." />
   <link rel="canonical" href="https://mike-muller.dev/contact" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Mike Muller, Shopify Developer" />
-  <meta property="og:title" content="Hire a Shopify Developer | Contact Mike Muller" />
+  <meta property="og:title" content="Hire a St. Louis Shopify Developer | Mike Muller" />
   <meta property="og:description" content="Hire a St. Louis based Shopify developer for store setup, theme customization, or ongoing support. Working remotely with clients anywhere. Replies within 1 business day." />
   <meta property="og:url" content="https://mike-muller.dev/contact" />
-  <meta property="og:image" content="https://mike-muller.dev/assets/profile-hero-enhanced.png" />
+  <meta property="og:image" content="https://mike-muller.dev/assets/profile-hero-enhanced.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <script>
     (function() {
-      var prefersDark = false;
-      try { prefersDark = localStorage.getItem('theme') === 'dark'; } catch (e) {}
-      if (!prefersDark) document.documentElement.setAttribute('data-theme', 'light');
+      var prefersLight = false;
+      try { prefersLight = localStorage.getItem('theme') === 'light'; } catch (e) {}
+      if (prefersLight) document.documentElement.setAttribute('data-theme', 'light');
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
@@ -32,59 +33,78 @@
   <div id="header"></div>
 
   <main>
-    <section class="page-header">
+    <section class="contact-v2">
       <div class="container">
-        <span class="eyebrow">Contact Info</span>
-        <h1>Let's Talk About Your Store</h1> 
-      </div>
-    </section>
-
-    <section class="section" style="padding-top: 40px;">
-      <div class="container contact-grid">
-        <div class="contact-info reveal">
-          <p>Shopify developer focused on your store's success. Send me a quick message and I'll get back within 1 business day.</p>
-
-          <div class="contact-detail">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <span>Email: <a href="mailto:mike@mike-muller.dev">mike@mike-muller.dev</a></span>
-          </div>
-          <div class="contact-detail">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Based in St. Louis, MO · Working with clients everywhere</span>
+        <div>
+          <span class="eyebrow">Contact</span>
+          <h1>Let's talk about your store.</h1>
+          <p class="lede">Send a quick message about what you're selling and where you're stuck. No pitch, no pressure.</p>
+          <ol class="next-steps" aria-label="What happens next">
+            <li><div><b>You send a message</b><span>A few sentences is plenty. Include your store link if you have one.</span></div></li>
+            <li><div><b>I reply within 1 business day</b><span>We set up a free discovery call at a time that works for you.</span></div></li>
+            <li><div><b>You get a clear proposal</b><span>Scope, timeline and pricing in writing, before any work starts.</span></div></li>
+          </ol>
+          <div class="email-direct">
+            <span class="eyebrow">Prefer email?</span>
+            <div class="email-row">
+              <a class="email-addr" id="emailAddr" href="mailto:mike@mike-muller.dev">mike@mike-muller.dev</a>
+              <button type="button" class="copy-btn" id="copyEmail">Copy</button>
+            </div>
+            <p>Based in St. Louis, MO · Working with clients everywhere</p>
           </div>
         </div>
 
-        <form class="contact-form reveal" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
           <input type="hidden" name="form-name" value="contact" />
           <p hidden><label>Leave this empty: <input name="bot-field" /></label></p>
           <div class="form-alert" role="alert" aria-live="polite"></div>
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" placeholder="Your name" required />
+          <div class="form-two">
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@yourstore.com" autocomplete="email" required />
+            </div>
           </div>
           <div class="form-row">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="Enter your email" required />
-          </div>
-          <div class="form-row">
-            <label for="service">What do you need?</label>
-            <select id="service" name="service" required>
-              <option value="">Choose a service</option>
-              <option>Shopify Store Setup</option>
-              <option>Theme Customizations</option>
-              <option>Ongoing Shopify Support</option>
-              <option>Custom Website</option>
-              <option>Other</option>
-            </select>
+            <fieldset>
+              <legend>What do you need?</legend>
+              <div class="service-tiles">
+                <label class="service-tile"><input type="radio" name="service" id="service" value="Shopify Store Setup" required><span>New store setup<small>Launch a store from scratch</small></span></label>
+                <label class="service-tile"><input type="radio" name="service" value="Theme Customizations"><span>Theme customizations<small>Custom features and sections</small></span></label>
+                <label class="service-tile"><input type="radio" name="service" value="Ongoing Shopify Support"><span>Ongoing support<small>Updates, fixes, training</small></span></label>
+                <label class="service-tile"><input type="radio" name="service" value="Custom Website"><span>Custom website<small>A site without a store</small></span></label>
+                <label class="service-tile"><input type="radio" name="service" value="Other"><span>Something else<small>Not sure yet? Pick this</small></span></label>
+              </div>
+            </fieldset>
           </div>
           <div class="form-row">
             <label for="message">Project Needs</label>
-            <textarea id="message" name="message" placeholder="Talk about your store, goals, and timeline." required></textarea>
+            <textarea id="message" name="message" placeholder="What you sell, what you'd like to change, and when you'd like it done." required></textarea>
+            <div class="msg-hints">Helpful to include:
+              <button type="button" data-msg-hint="Store link: ">Store link</button>
+              <button type="button" data-msg-hint="What I sell: ">What you sell</button>
+              <button type="button" data-msg-hint="Timeline: ">Timeline</button>
+            </div>
           </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send message →</button>
+          <div class="form-submit">
+            <span class="reply-by" id="replyBy">I'll reply within 1 business day.</span>
+            <button type="submit" class="btn btn-primary">Send message →</button>
+          </div>
         </form>
       </div>
     </section>
+
+    <div class="promise-strip">
+      <div class="container">
+        <span>Free discovery call</span>
+        <span>No obligation</span>
+        <span>Proposal in writing before work starts</span>
+        <span>30 days of post-launch fixes included</span>
+      </div>
+    </div>
   </main>
 
   <div id="footer"></div>

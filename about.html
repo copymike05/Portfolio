@@ -11,17 +11,18 @@
   <meta property="og:title" content="About Mike Muller | St. Louis Shopify Developer" />
   <meta property="og:description" content="Mike Muller is a St. Louis based Shopify developer building custom storefronts, theme customizations, and ongoing support for clients everywhere." />
   <meta property="og:url" content="https://mike-muller.dev/about" />
-  <meta property="og:image" content="https://mike-muller.dev/assets/profile-hero-enhanced.png" />
+  <meta property="og:image" content="https://mike-muller.dev/assets/profile-hero-enhanced.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <script>
     (function() {
-      var prefersDark = false;
-      try { prefersDark = localStorage.getItem('theme') === 'dark'; } catch (e) {}
-      if (!prefersDark) document.documentElement.setAttribute('data-theme', 'light');
+      var prefersLight = false;
+      try { prefersLight = localStorage.getItem('theme') === 'light'; } catch (e) {}
+      if (prefersLight) document.documentElement.setAttribute('data-theme', 'light');
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
@@ -32,50 +33,154 @@
   <div id="header"></div>
 
   <main>
-    <section class="page-header">
+    <section class="about-intro">
       <div class="container">
-        <span class="eyebrow">About</span>
-        <h1>The developer behind the store</h1>
-        <p>St. Louis based Shopify Developer building stores that look sharp and convert well.</p>
+        <div>
+          <span class="eyebrow">About</span>
+          <h1>The developer behind the store</h1>
+          <p class="lede">Hello, I'm Mike, a Shopify Developer building stores that look sharp and convert well.</p>
+          <div class="chip-row">
+            <span class="chip">St. Louis, MO</span>
+            <span class="chip">Shopify-focused</span>
+            <span class="chip">Remote-friendly</span>
+          </div>
+        </div>
+        <div class="about-portrait">
+          <img src="assets/profile-hero-enhanced.jpg" alt="Mike Muller, St. Louis Shopify Developer" width="900" height="1125">
+          <span class="stage-tag">Based in St. Louis</span>
+        </div>
       </div>
     </section>
 
-    <section class="section" style="padding-top: 40px;">
-      <div class="container about-grid">
-        <div>
-          <div class="hero-portrait" style="aspect-ratio: 1/1;">
-            <img src="assets/profile-about-enhanced.png" alt="Mike Muller" width="900" height="900">
+    <section class="section about-story">
+      <div class="container">
+        <h2 class="reveal">Small details make a store feel like yours.</h2>
+        <div class="prose reveal">
+          <p class="prose-lead">I build custom Shopify storefronts: new store builds, theme customizations and ongoing support.</p>
+          <p>Before focusing on Shopify, I spent eight years building and maintaining accounting software in <strong>C# and SQL</strong> and spent time in accounting and client services. That background shapes how I work: <strong>I think in systems</strong>, I pay attention to the details that affect how a business actually runs, and I communicate clearly without fancy tech jargon.</p>
+          <p>Right now I'm building a new store for <strong>squatch_golf</strong>, launching in spring 2027, and supporting ongoing clients like <strong>Wicking Vicar</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="intro-card reveal">
+          <button type="button" class="intro-video project-thumb-video" data-video="assets/intro-home-page.mp4" aria-label="Play Mike Muller's one-minute introduction video">
+            <video class="project-preview" src="assets/intro-home-page.mp4" poster="assets/home-intro-poster.jpg" muted playsinline preload="none"></video>
+            <span class="video-play-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </button>
+          <div>
+            <span class="eyebrow">Meet me in 60 seconds</span>
+            <h2>A quick hello before we talk shop.</h2>
+            <p>Who I am, how I work, and what it's like having me on your project.</p>
           </div>
         </div>
-        <div class="about-text reveal">
-          <p><strong>Hello, I'm Mike.</strong> </p>
-          <p>I build custom Shopify storefronts, including new store builds, theme customizations and ongoing support. I understand the importance of small details and how they make a store feel unique instead of generic. Currently, I'm working on a new Shopify store build launching in spring 2027.</p>
-          <p>Before focusing on Shopify, I worked in software development (C# and SQL) and spent time in accounting and client services. That background shapes how I operate: I think in systems, I pay attention to the details that affect how a business actually runs, and I communicate clearly — not in tech jargon.</p>
-          <p>I'm based in St. Louis, Missouri, and work remotely with clients wherever they are. I'm always glad to grab coffee with local store owners, and just as happy to work over video calls with businesses across the country and beyond.</p>
-          <p>I work with business owners who care about how their brand looks and how their store performs. If that sounds like you, I'd love to chat.</p>
-            
-          <h3 style="margin-top: 32px; margin-bottom: 8px;">Tools I Work With</h3>
-          <div class="skills-grid">
-            <div class="skill-chip">Shopify Liquid</div>
-            <div class="skill-chip">HTML & CSS</div>
-            <div class="skill-chip">JavaScript</div>
-            <div class="skill-chip">Theme architecture</div>
-            <div class="skill-chip">Storefront API</div>
-            <div class="skill-chip">Performance tuning</div>
-            <div class="skill-chip">Responsive design</div>
-            <div class="skill-chip">Git & version control</div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">How I work</span>
+            <h2>What you can expect from me</h2>
           </div>
         </div>
+        <div class="principles reveal">
+          <div class="principle"><h3>You work with me directly</h3><p>The person you talk to on the discovery call is the person working on your store, start to finish.</p></div>
+          <div class="principle"><h3>Clear Communication</h3><p>I'll tell you what I'm doing and why in easy to understand manner.</p></div>
+          <div class="principle"><h3>I think in systems</h3><p>Years of accounting software taught me that inventory, fulfillment and checkout all connect. I build with the whole business in mind.</p></div>
+          <div class="principle"><h3>You're never stuck</h3><p>Every project includes 30 days of post-launch fixes and clear documentation so your team can handle day-to-day changes on its own.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section journey">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Journey</span>
+            <h2>How I got here.</h2>
+          </div>
+        </div>
+        <ol class="journey-line reveal">
+          <li class="journey-stop">
+            <span class="journey-when">2018 – 2026</span>
+            <h3>Software Developer</h3>
+            <p>Built and maintained a customized application in C# and SQL. Collaborated with a team in writing dependable, maintainable code for accounting software that worked in conjunction with Dynamics GP.</p>
+          </li>
+          <li class="journey-stop">
+            <span class="journey-when">2026</span>
+            <h3>Coding With Jan Bootcamp</h3>
+            <p>Completed the Developer Bootcamp through Coding with Jan. Active participant in its developer community for ongoing training and skills development.</p>
+            <div class="credential">
+              <button type="button" class="credential-card" data-image="assets/certificate.png"
+                      data-image-alt="AI Developer Bootcamp certificate awarded to Michael Charles Muller by Coding with Jan, dated August 2026">
+                <img class="credential-thumb" src="assets/certificate.png" alt="" loading="lazy">
+                <span class="credential-body">
+                  <span class="credential-action">View certificate →</span>
+                </span>
+              </button>
+            </div>
+          </li>
+          <li class="journey-stop is-now">
+            <span class="journey-when">Now</span>
+            <h3>Freelance Shopify Developer</h3>
+            <p>Building custom Shopify stores and theme customizations for small businesses and helping them grow their online presence.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Toolkit</span>
+            <h2>Tools I work with.</h2>
+          </div>
+        </div>
+        <div class="tools-grid reveal">
+          <div class="tool"><b>Shopify Liquid</b></div>
+          <div class="tool"><b>HTML &amp; CSS</b></div>
+          <div class="tool"><b>JavaScript</b></div>
+          <div class="tool"><b>Theme architecture</b></div>
+          <div class="tool"><b>Storefront API</b></div>
+          <div class="tool"><b>Performance tuning</b></div>
+          <div class="tool"><b>Responsive design</b></div>
+          <div class="tool"><b>Git &amp; version control</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container local-split reveal">
+        <div><span class="eyebrow">Local</span><h3>Coffee in St. Louis</h3><p>If you're nearby, I'd love to meet in person and talk.</p></div>
+        <div><span class="eyebrow">Elsewhere</span><h3>Video calls, anywhere</h3><p>Screen sharing and Shopify collaborator access mean your location never gets in the way.</p></div>
       </div>
     </section>
 
     <section class="footer-cta">
       <div class="container">
-        <h2>Let's build something good.</h2>
+        <div>
+          <h2>Let's build something good.</h2>
+          <p>Tell me about your store and where you want it to go. You'll hear back within one business day.</p>
+        </div>
         <a href="contact.html" class="btn btn-primary">Get in touch →</a>
       </div>
     </section>
   </main>
+
+  <div class="video-lightbox" id="videoLightbox" role="dialog" aria-modal="true" aria-label="Media preview" aria-hidden="true">
+    <button type="button" class="video-lightbox-close" aria-label="Close preview">&times;</button>
+    <div class="video-lightbox-inner">
+      <video class="video-lightbox-player" controls playsinline></video>
+      <img class="video-lightbox-image" alt="" hidden>
+    </div>
+  </div>
 
   <div id="footer"></div>
 
