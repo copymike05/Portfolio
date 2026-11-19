@@ -15,9 +15,9 @@
   <meta name="twitter:card" content="summary_large_image" />
   <script>
     (function() {
-      var prefersLight = false;
-      try { prefersLight = localStorage.getItem('theme') === 'light'; } catch (e) {}
-      if (prefersLight) document.documentElement.setAttribute('data-theme', 'light');
+      var prefersDark = false;
+      try { prefersDark = localStorage.getItem('theme') === 'dark'; } catch (e) {}
+      if (!prefersDark) document.documentElement.setAttribute('data-theme', 'light');
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
