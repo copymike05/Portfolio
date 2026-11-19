@@ -4,24 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wicking Vicar Shopify Customizations | Mike Muller</title>
-  <meta name="description" content="Case study: Shopify customizations for Wicking Vicar, including a custom YouTube video section, Coming Soon badges, product email signup forms, and admin training on partial fulfillments." />
+  <meta name="description" content="Shopify customizations for Wicking Vicar, including a custom YouTube video section, Coming Soon badges, product email signup forms, and admin training on partial fulfillments." />
   <link rel="canonical" href="https://mike-muller.dev/wickingvicar" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Mike Muller, Shopify Developer" />
   <meta property="og:title" content="Wicking Vicar Shopify Customizations | Mike Muller" />
-  <meta property="og:description" content="Case study: Shopify customizations for Wicking Vicar, including a custom YouTube video section, Coming Soon badges, product email signup forms, and admin training on partial fulfillments." />
+  <meta property="og:description" content="Shopify customizations for Wicking Vicar, including a custom YouTube video section, Coming Soon badges, product email signup forms, and admin training on partial fulfillments." />
   <meta property="og:url" content="https://mike-muller.dev/wickingvicar" />
-  <meta property="og:image" content="https://mike-muller.dev/assets/profile-hero-enhanced.png" />
+  <meta property="og:image" content="https://mike-muller.dev/assets/profile-hero-enhanced.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <script>
     (function() {
-      var prefersDark = false;
-      try { prefersDark = localStorage.getItem('theme') === 'dark'; } catch (e) {}
-      if (!prefersDark) document.documentElement.setAttribute('data-theme', 'light');
+      var prefersLight = false;
+      try { prefersLight = localStorage.getItem('theme') === 'light'; } catch (e) {}
+      if (prefersLight) document.documentElement.setAttribute('data-theme', 'light');
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
@@ -127,7 +128,7 @@
     <section class="footer-cta">
       <div class="container">
         <h2>Want custom features built into your theme?</h2>
-        <a href="contact.html" class="btn btn-primary">Tell me about it →</a>
+        <a href="contact.html" class="btn btn-primary" data-text="ctaButton"></a>
       </div>
     </section>
   </main>

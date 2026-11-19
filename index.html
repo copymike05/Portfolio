@@ -11,17 +11,18 @@
   <meta property="og:title" content="Freelance Shopify Developer in St. Louis | Mike Muller" />
   <meta property="og:description" content="St. Louis based freelance Shopify developer helping store owners anywhere with new store setup, theme customization, and ongoing Shopify support." />
   <meta property="og:url" content="https://mike-muller.dev/" />
-  <meta property="og:image" content="https://mike-muller.dev/assets/profile-hero-enhanced.png" />
+  <meta property="og:image" content="https://mike-muller.dev/assets/profile-hero-enhanced.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <script>
     (function() {
-      var prefersDark = false;
-      try { prefersDark = localStorage.getItem('theme') === 'dark'; } catch (e) {}
-      if (!prefersDark) document.documentElement.setAttribute('data-theme', 'light');
+      var prefersLight = false;
+      try { prefersLight = localStorage.getItem('theme') === 'light'; } catch (e) {}
+      if (prefersLight) document.documentElement.setAttribute('data-theme', 'light');
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
@@ -37,7 +38,7 @@
     "description": "Freelance Shopify developer based in St. Louis, Missouri, offering new Shopify store setup, theme customization, and ongoing Shopify support to clients anywhere.",
     "url": "https://mike-muller.dev/",
     "email": "mike@mike-muller.dev",
-    "image": "https://mike-muller.dev/assets/profile-hero-enhanced.png",
+    "image": "https://mike-muller.dev/assets/profile-hero-enhanced.jpg",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "St. Louis",
@@ -71,202 +72,227 @@
   <div id="header"></div>
 
   <main>
-    <!-- Hero -->
-    <section class="hero">
+    <!-- Hero: the work up front, live store recordings instead of a headshot -->
+    <section class="hero-v2">
       <div class="container hero-grid">
-        <div>        
-          <span class="eyebrow">Hi, I'm Mike Muller</span>            
+        <div>
+          <span class="eyebrow">Shopify developer · St. Louis · clients anywhere</span>
           <h1>Shopify stores that launch fast and actually sell</h1>
           <p class="hero-tagline">St. Louis based Shopify developer building and customizing stores for small business owners everywhere, so you can focus on running yours.</p>
           <div class="hero-actions">
-            <a href="contact.html" class="btn btn-primary">Start a Free Discovery Call</a>
+            <a href="contact.html" class="btn btn-primary">Start a free discovery call →</a>
+            <a href="#work" class="btn btn-ghost">See my work ↓</a>
           </div>
           <ul class="hero-trust">
             <li>Shopify Specialist & Advocate</li>
             <li>Replies within 1 business day</li>
-            <li>Ongoing support</li>
+            <li><a href="#press">Featured in a 16-expert Shopify roundup</a></li>
           </ul>
         </div>
-        <div class="hero-portrait">
-          <img src="assets/profile-hero-enhanced.png" alt="Mike Muller" width="900" height="1125">
+        <div class="hero-stage" aria-label="Screen recordings of Shopify stores Mike has worked on">
+          <!-- f1 is the large front window: Wicking Vicar, the main ongoing client -->
+          <div class="browser-frame f2">
+            <div class="browser-bar"><b>The Game of WASH</b></div>
+            <video data-autoplay src="assets/game-of-wash.mp4" poster="assets/game-of-wash-poster.jpg" muted loop playsinline preload="metadata"></video>
+          </div>
+          <div class="browser-frame f1">
+            <div class="browser-bar"><b>Wicking Vicar</b></div>
+            <video data-autoplay src="assets/wicking-vickar-video.mp4" poster="assets/wicking-vickar-video-poster.jpg" muted loop playsinline preload="metadata"></video>
+          </div>
+          <div class="browser-frame f3">
+            <div class="browser-bar"><b>squatch_golf</b></div>
+            <video data-autoplay src="assets/squatch-golf-latest.mp4" poster="assets/squatch-golf-latest-poster.jpg" muted loop playsinline preload="metadata"></video>
+          </div>
+          <span class="stage-tag">Real stores. Real recordings.</span>
         </div>
       </div>
     </section>
 
-    <!-- Intro video -->
-    <section class="section" id="intro">
+    <!-- Client strip -->
+    <div class="client-strip">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="eyebrow">Meet Mike</span>
-          <h2>A quick hello before we talk shop</h2>
-          <p>A minute on who I am, how I work, and what it's like having me on your project.</p>
+        <span class="eyebrow">Shopify stores I've worked on</span>
+        <ul>
+          <li>Wicking Vicar</li>
+          <li>The Game of WASH</li>
+          <li>squatch_golf <span class="strip-note">launching spring 2027</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Featured work -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Portfolio</span>
+            <h2>Client work</h2>
+            <p>Here's some of my work, including customizations and new store builds. Take a look at what I've built and picture how it could work on your store.</p>
+          </div>
+          
         </div>
-        <button type="button" class="intro-video project-thumb-video reveal" data-video="assets/intro-home-page.mp4" aria-label="Play Mike Muller's introduction video">
-          <video class="project-preview" src="assets/intro-home-page.mp4" poster="assets/home-intro-poster.jpg" muted playsinline preload="none"></video>
-          <span class="video-play-badge" aria-hidden="true">
-          <!-- Show play arrow within video. Without it, play icon displays as a green circle-->
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> 
-          </span>
-        </button>
+
+        <!-- Wicking Vicar (main ongoing client), with a before/after demo of the Coming Soon fix -->
+        <article class="feature-case reveal">
+          <div>
+            <div class="browser-frame">
+              <div class="browser-bar"><b>Wicking Vicar</b></div>
+              <video data-autoplay src="assets/wv-coming-soon-and-email.mp4" poster="assets/wv-coming-soon-and-email.jpg" muted loop playsinline preload="metadata"></video>
+            </div>
+            <div class="chip-row">
+              <span class="chip chip-status is-live">Ongoing client · 2 projects</span>
+              <span class="chip">Coming Soon badges</span>
+              <span class="chip">Product-specific signups</span>
+              <span class="chip">Custom video section</span>
+            </div>
+            <h3><a href="wickingvicar.html">Wicking Vicar</a></h3>
+            <p class="feature-desc">When new toys were listed before inventory was available, Shopify automatically labeled them "Sold out" and shoppers moved on. I replaced that with a Coming Soon badge and gave each product its own email signup. Test the "Live Demo" on the right to see how this works.</p>
+            <div class="feature-links">
+              <a href="wickingvicar.html" class="link-underline">See more work for this client →</a>
+            </div>
+          </div>
+
+          <form class="store-demo" id="comingSoonDemo" aria-label="Before and after demo of the Coming Soon badge" novalidate>
+            <div class="demo-row"><span class="eyebrow">Live demo</span><span class="chip chip-lime">Try it</span></div>
+            <div class="seg" role="group" aria-label="Show the product page">
+              <button type="button" data-cs-mode="before" aria-pressed="true">Before</button>
+              <button type="button" data-cs-mode="after" aria-pressed="false">After my fix</button>
+            </div>
+            <div class="demo-product">
+              <img src="assets/wv-maundy-play-set.jpg" alt="Wooden Maundy Thursday Play Set" width="480" height="480" loading="lazy">
+              <div>
+                <span class="demo-name">Wooden Maundy Thursday Play Set</span>
+                <div class="demo-row demo-price-row">
+                  <span class="demo-price">$45.00</span>
+                  <span class="stock-badge" id="csBadge">Sold out</span>
+                </div>
+              </div>
+            </div>
+            <div class="cs-before" id="csBefore">
+              <button type="button" class="btn btn-ghost" disabled>Sold out</button>
+              <p class="demo-small">By default, Shopify classifes as products as Sold out when inventory count is zero. With this setting, new products can't be distinguished from existing products.</p>
+            </div>
+            <div class="cs-after" id="csAfter" hidden>
+              <label class="demo-small" for="csEmail">Get an email when this play set is in stock.</label>
+              <div class="notify-row">
+                <input type="email" id="csEmail" placeholder="you@example.com" autocomplete="email">
+                <button class="btn btn-primary" type="submit">Notify me</button>
+              </div>
+            </div>
+            <p class="demo-note" id="csNote" aria-live="polite"></p>
+          </form>
+        </article>
+
+        <div class="work-grid">
+          <a href="squatchgolf.html" class="work-card reveal">
+            <div class="work-media">
+              <video data-hover src="assets/squatch-golf-latest.mp4" poster="assets/squatch-golf-latest-poster.jpg" muted loop playsinline preload="none"></video>
+              <span class="play-hint">▶ Hover to play</span>
+            </div>
+            <div class="work-body">
+              <div class="chip-row"><span class="chip chip-status is-wip">Launching spring 2027</span></div>
+              <h3>squatch_golf</h3>
+              <ul>
+                <li>Full golf apparel store setup</li>
+                <li>Store will include performance polos, quarter-zips and accessories</li>
+                <li>Will provide ongoing support as the brand grows and evolves</li>
+              </ul>
+            </div>
+          </a>
+          <a href="thegameofwash.html" class="work-card reveal">
+            <div class="work-media">
+              <video data-hover src="assets/game-of-wash.mp4" poster="assets/game-of-wash-poster.jpg" muted loop playsinline preload="none"></video>
+              <span class="play-hint">▶ Hover to play</span>
+            </div>
+            <div class="work-body">
+              <div class="chip-row"><span class="chip chip-status">Upsell feature</span></div>
+              <h3>The Game of WASH</h3>
+              <ul>
+                <li>Added ability to sell extra dice with a color picker on product page</li>
+                <li>This will prevent store owner from making special arrangements to sell extra dice.</li>
+                <li>Created customer testimonial slider and dedicated testimonial page</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+        <div class="work-more"><a href="projects.html" class="link-underline">View all projects →</a></div>
+      </div>
+    </section>
+
+    <!-- Testimonial: sits right after the work so Liz's words back up the Wicking Vicar case -->
+    <section class="section" id="testimonials" style="padding-top: 0;">
+      <div class="container">
+        <figure class="big-quote reveal">
+          <blockquote>Mike took the time to understand my needs and goals. He was able to suggest fixes and updates that moved my site in the correct direction. He was easy to work with and I appreciated his patience and commitment.</blockquote>
+          <figcaption class="testimonial-author">
+            <span class="testimonial-avatar" aria-hidden="true">LK</span>
+            <span>
+              <strong>Liz King</strong>
+              <span class="testimonial-role"><a href="https://www.wickingvicar.com" target="_blank" rel="noopener">Wicking Vicar</a></span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <!-- Press: Brugts Services expert roundup, Nov 2026 -->
+        <aside class="press-card reveal" id="press">
+          <span class="eyebrow">Featured in a Shopify developer roundup</span>
+          <h3><a href="https://brugtsservices.com/pages/shopify-experts-roundup#issue-3" target="_blank" rel="noopener">16 Shopify Experts on the First Thing They Find Broken in a Store Audit</a></h3>
+          <p class="press-source">Brugts Services · November 2026</p>
+          <blockquote>“A slick, exciting site can be wasted if the visitor doesn't understand what's being offered.”</blockquote>
+          <p class="press-attrib">Mike Muller</p>
+          <a href="https://brugtsservices.com/pages/shopify-experts-roundup#issue-3" target="_blank" rel="noopener" class="link-underline">Read my full answer →</a>
+        </aside>
       </div>
     </section>
 
     <!-- Services -->
-    <section class="section" id="services" style="padding-top: 0;">
+    <section class="section services-v2" id="services">
       <div class="container">
-        <div class="section-header reveal">          
-          <h2>How Can I Help You?</h2>
-          <p>End-to-end Shopify work, from launching a fresh storefront to customizing every aspect of an existing store.</p>
-        </div>
-        <div class="services-grid">
-          <div class="service-card reveal">
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            </div>
-            <h3>New Store Setup</h3>
-            <p>I handle full Shopify store setups, including theme selection, product setup and store deployment so you launch with a store that's ready to sell on Day 1.</p>
-          </div>
-          <div class="service-card reveal">
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            </div>
-            <h3>Advanced Theme Customization</h3>
-            <p>I create customized store features and sections to give your store a unique feel and enhance your company's brand.</p>
-          </div>
-          <div class="service-card reveal">
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-            </div>
-            <h3>Ongoing Shopify Support</h3>
-            <p>Think of me as an extension of your team. Shopify stores are never truly "finished," so I provide ongoing support to let you focus on what you do best — growing your business.</p>
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">How I can help</span>
+            <h2>End-to-end Shopify work, from launching a new storefront to customizing existing stores.</h2>
           </div>
         </div>
-      </div>
-    </section>    
-
-    <!-- Projects preview -->
-    <section class="section" id="projects" style="padding-top: 0;">
-      <div class="container">
-        <div class="section-header reveal">          
-          <h2>Recent projects</h2>
+        <div class="svc-row reveal">
+          <h3>New store setup</h3>
+          <p>I handle full Shopify store setups, including theme selection, product setup and store deployment so you launch with a store that's ready to sell on Day 1.</p>
+          <div class="chip-row"><span class="chip">Theme setup</span><span class="chip">Products &amp; collections</span><span class="chip">Launch</span></div>
         </div>
-        <div class="projects-grid">
-          <a href="wickingvicar.html" class="project-card reveal">
-            <div class="project-thumb project-thumb-video">
-              <video class="project-preview" src="assets/wicking-vickar-video.mp4" poster="assets/wicking-vickar-card-poster.jpg" muted playsinline preload="metadata"></video>
-            </div>
-            <div class="project-body">
-              <span class="project-tag">Shopify Customizations - Ongoing client, 2 projects</span>
-              <h3>Wicking Vicar</h3>
-              <p>Rebuilt the site's video section with a custom YouTube-powered section, added Coming Soon badges and product-specific email signups, and provided admin training on partial fulfillments.</p>
-            </div>
-          </a>
-          <a href="thegameofwash.html" class="project-card reveal">
-            <div class="project-thumb project-thumb-video">
-              <video class="project-preview" src="assets/game-of-wash.mp4" poster="assets/game-of-wash-poster.jpg" muted playsinline preload="metadata"></video>
-            </div>            
-            <div class="project-body">
-              <span class="project-tag">Shopify Customizations - Upsell feature</span>
-              <h3>The Game of Wash</h3>
-              <p>Created upsell feature so extra dice could be purchased on product page. Also built customized testimonial slider and custom Testimonial page.</p>
-            </div>
-          </a>
+        <div class="svc-row reveal">
+          <h3>Advanced theme customization</h3>
+          <p>Creating custom sections and features like upsells, video sections and signup badges to give your store a unique feel and enhance your company's brand.</p>
+          <div class="chip-row"><span class="chip">Liquid</span><span class="chip">Custom sections</span><span class="chip">JavaScript</span></div>
         </div>
-        <div class="projects-cta reveal">
-          <a href="projects.html" class="btn btn-ghost">View all projects →</a>
+        <div class="svc-row reveal">
+          <h3>Ongoing Shopify support</h3>
+          <p>Think of me as an extension of your team. Stores are never truly "finished" so I handle the changes and fixes while you focus on what you do best - growing your business.</p>
+          <div class="chip-row"><span class="chip">Updates</span><span class="chip">Fixes</span><span class="chip">Training</span></div>
         </div>
       </div>
     </section>
 
-    <!-- Testimonials carousel -->
-    <section class="section" id="testimonials" style="padding-top: 0;">
+    <!-- Meet Mike: the one small personal block on the homepage -->
+    <section class="section" id="intro">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="eyebrow">Testimonials</span>
-          <h2>What my clients are saying</h2>
-        </div>
-
-        <div class="testimonial-carousel reveal" role="region" aria-roledescription="carousel" aria-label="Client testimonials">
-          <div class="testimonial-viewport">
-            <div class="testimonial-track">
-              <!-- 1st testimonial -->
-              <figure class="testimonial-card">
-                <blockquote>Mike took the time to understand my needs and goals. He was able to suggest fixes and updates that moved my site in the correct direction. He was easy to work with and I appreciated his patience and commitment.</blockquote>
-                <figcaption class="testimonial-author">
-                  <span class="testimonial-avatar" aria-hidden="true">LK</span>
-                  <span>
-                    <strong>Liz King</strong>
-                    <span class="testimonial-role"><a href="https://www.wickingvicar.com" target="_blank" rel="noopener">Wicking Vicar</a></span>
-                  </span>
-                </figcaption>
-              </figure>
-
-              <!-- 2nd testimonial -->
-              <figure class="testimonial-card">
-                <blockquote>I am an independent author, and Mike has been helping me set up my website to sell books and advertise all my projects. He has been incredibly easy to work with, very attentive to detail and, most importantly, full of great ideas.  I would recommend him to anybody who wants to get an online presence but doesn’t know where to start</blockquote>
-                <figcaption class="testimonial-author">
-                  <span class="testimonial-avatar" aria-hidden="true">JM</span>
-                  <span>
-                    <strong>Joseph Muller</strong>
-                    <span class="testimonial-role">Self-Published Author</span>
-                  </span>
-                </figcaption>
-              </figure>
+        <div class="meet-card reveal">
+          <div>
+            <span class="eyebrow">You'll work directly with me</span>
+            <h2>No agency or outsourcing. Just me and your store.</h2>
+            <p>I spent eight years building software in C# and SQL before focusing on Shopify. I believe the small details greatly matter and am a clear commnicator that's used to working under tight deadlines.</p>
+            <div class="btn-row">
+              <a href="about.html" class="btn btn-ghost">More about me →</a>
+              <button type="button" class="btn btn-ghost" data-video="assets/intro-home-page.mp4">▶ Watch my 1-minute intro</button>
             </div>
-          </div>
-
-          <div class="testimonial-controls">
-            <button type="button" class="testimonial-arrow" data-testimonial-prev aria-label="Previous testimonial">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
-            </button>
-            <button type="button" class="testimonial-arrow" data-testimonial-next aria-label="Next testimonial">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-     <!-- Timeline -->
-    <section class="section" style="background: linear-gradient(180deg, transparent, rgba(199,255,58,0.03), transparent);">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="eyebrow">Journey</span>
-          <h2>How I got here</h2>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item reveal">
-            <div class="timeline-date">Now</div>
-            <h3>Freelance Shopify Developer</h3>
-            <p>Building custom Shopify stores and theme customizations for small businesses and helping them grow their online presence.</p>
-          </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-date">2026</div>
-            <h3>Coding With Jan Bootcamp</h3>
-            <p>Completed Developer Bootcamp through Coding with Jan. Active participant in its developer community for ongoing training and skills development.</p>
-            <div class="credential">
-              <button type="button" class="credential-card" data-image="assets/certificate.png"
-                      data-image-alt="AI Developer Bootcamp certificate awarded to Michael Charles Muller by Coding with Jan, dated August 2026">
-                <img class="credential-thumb" src="assets/certificate.png" alt="" loading="lazy">
-                <span class="credential-body">
-                  <span class="credential-action">View certificate →</span>
-                </span>
-              </button>
-            </div>
-          </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-date">2018-2026</div>
-            <h3>Software Developer</h3>
-            <p>Built and maintained a customized application in C# and SQL. Collaborated with a team in writing dependable, maintainable code for accounting software that worked in conjunction with Dynamics GP.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header reveal">
+    <section class="section" id="faq" style="padding-top: 0;">
+      <div class="container faq-split">
+        <div class="reveal">
           <span class="eyebrow">Common questions</span>
           <h2>What are clients asking?</h2>
         </div>
@@ -281,24 +307,27 @@
           </div>
           <div class="faq-item reveal">
             <button class="faq-question">Do you take on non-Shopify projects?<span class="faq-toggle">+</span></button>
-            <div class="faq-answer"><p>Yes. My focus is Shopify, but I also build fast, custom websites for businesses that don't need an online store. This site is one of them. If you're not sure which is right for you, reach out and we can discuss.</p></div>
+            <div class="faq-answer"><p>Yes. My focus is Shopify, but I also build custom websites for businesses that don't need an online store. This site is one of them. If you're not sure which is right for you, reach out and we can discuss.</p></div>
           </div>
           <div class="faq-item reveal">
             <button class="faq-question">Do you only work with businesses in St. Louis?<span class="faq-toggle">+</span></button>
-            <div class="faq-answer"><p>No. I'm based in St. Louis and always happy to meet local store owners in person but I work remotely with clients anywhere. Video calls, screen sharing, and Shopify's collaborator access mean your location never gets in the way of your project.</p></div>
+            <div class="faq-answer"><p>No. I'm based in St. Louis and love working with local store owners but I work remotely with clients anywhere. Video calls, screen sharing, and Shopify's collaborator access mean your location never delays your project.</p></div>
           </div>
           <div class="faq-item reveal">
             <button class="faq-question">Do you offer ongoing support after a project is complete?<span class="faq-toggle">+</span></button>
             <div class="faq-answer"><p>Yes. Every project includes a 30-day post-launch period for bug fixes at no charge. After that, ongoing support and updates are available as a paid service. I'll always give you clear documentation so your team can handle day-to-day tasks independently if you prefer.</p></div>
-          </div>          
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Footer CTA -->
     <section class="footer-cta">
-      <div class="container">        
-        <h2 class="reveal">Have a project in mind? Let's talk.</h2>
+      <div class="container">
+        <div>
+          <h2>Let's make your store stand out and get it selling.</h2>
+          <p>Tell me what you're selling and where you want to take your business. You'll hear back from me within one business day.</p>
+        </div>
         <a href="contact.html" class="btn btn-primary">Start a conversation →</a>
       </div>
     </section>

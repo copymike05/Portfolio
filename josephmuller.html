@@ -4,24 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joseph Muller Author Website | Mike Muller</title>
-  <meta name="description" content="Case study: an author website for Joseph Muller, a self-published author of historical fiction and children's books." />
+  <meta name="description" content="An author website for Joseph Muller, a self-published author of historical fiction and children's books." />
   <link rel="canonical" href="https://mike-muller.dev/josephmuller" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Mike Muller, Shopify Developer" />
   <meta property="og:title" content="Joseph Muller Author Website | Mike Muller" />
-  <meta property="og:description" content="Case study: an author website for Joseph Muller, a self-published author of historical fiction and children's books." />
+  <meta property="og:description" content="An author website for Joseph Muller, a self-published author of historical fiction and children's books." />
   <meta property="og:url" content="https://mike-muller.dev/josephmuller" />
-  <meta property="og:image" content="https://mike-muller.dev/assets/profile-hero-enhanced.png" />
+  <meta property="og:image" content="https://mike-muller.dev/assets/profile-hero-enhanced.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <script>
     (function() {
-      var prefersDark = false;
-      try { prefersDark = localStorage.getItem('theme') === 'dark'; } catch (e) {}
-      if (!prefersDark) document.documentElement.setAttribute('data-theme', 'light');
+      var prefersLight = false;
+      try { prefersLight = localStorage.getItem('theme') === 'light'; } catch (e) {}
+      if (prefersLight) document.documentElement.setAttribute('data-theme', 'light');
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
@@ -48,7 +49,7 @@
     <section class="case-video">
       <div class="container">
         <div class="case-video-frame">
-          <img src="assets/joseph-muller-site.jpg" alt="Homepage of the author website for Joseph Muller, in progress" width="1887" height="896">
+          <img src="assets/joseph-muller-site.jpg" alt="Homepage of the author website for Joseph Muller, in progress" width="1777" height="847">
         </div>
       </div>
     </section>
@@ -56,7 +57,7 @@
     <section class="section" style="padding-top: 56px;">
       <div class="container">
         <div class="case-body reveal">
-          <p>I'm currently building a custom author website for Joseph Muller, a self-published author of historical fiction novels who recently published his first children's story.</p>
+          <p>I'm currently building a custom website for Joseph Muller, a self-published author of historical fiction novels who recently published his first children's story.</p>
           <p>This project involves:</p>
           <ul>
             <li>Designing a custom site that reflects his personal brand</li>
@@ -67,6 +68,16 @@
           <p>Since Amazon already prints and ships his books, a custom website was the right fit. This gives him a professional home for his work without changing how his books get sold. </p> 
             <p>Check back soon for updates.</p>
         </div>
+        <figure class="big-quote reveal" style="margin-top: 56px;">
+          <blockquote>I am an independent author, and Mike has been helping me set up my website to sell books and advertise all my projects. He has been incredibly easy to work with, very attentive to detail and, most importantly, full of great ideas. I would recommend him to anybody who wants to get an online presence but doesn’t know where to start.</blockquote>
+          <figcaption class="testimonial-author">
+            <span class="testimonial-avatar" aria-hidden="true">JM</span>
+            <span>
+              <strong>Joseph Muller</strong>
+              <span class="testimonial-role">Self-Published Author</span>
+            </span>
+          </figcaption>
+        </figure>
         <div class="case-project-head reveal" style="margin-top: 48px; margin-bottom: 0;">
           <span class="case-project-num">A closer look</span>
         </div>
@@ -74,7 +85,7 @@
           <img src="assets/joseph-muller-books.jpg" alt="Books section of Joseph Muller's author website, with a Buy on Amazon button for each title" width="1230" height="896" loading="lazy">
         </div>
         <div class="case-video-frame reveal" style="margin-top: 40px;">
-          <img src="assets/joseph-muller-podcasts.jpg" alt="Podcast section of Joseph Muller's author website, featuring two interview episodes" width="1296" height="885" loading="lazy">
+          <img src="assets/joseph-muller-podcasts.jpg" alt="Podcast section of Joseph Muller's author website, featuring two interview episodes" width="1146" height="821" loading="lazy">
         </div>
       </div>
        <div class="projects-cta reveal">
@@ -85,7 +96,7 @@
     <section class="footer-cta">
       <div class="container">
         <h2>Selling something of your own?</h2>
-        <a href="contact.html" class="btn btn-primary">Tell me about it →</a>
+        <a href="contact.html" class="btn btn-primary" data-text="ctaButton"></a>
       </div>
     </section>
   </main>
